@@ -1,0 +1,366 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    padding: 15px 40px;
+
+    background-image: linear-gradient(
+        to right,
+        rgb(53, 31, 31),
+        rgb(75, 46, 40),
+        rgb(179, 50, 18)
+    );
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img{
+    width: 70px;
+}
+
+h1{
+    color: white;
+}
+
+.h1{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+ul{
+    display: flex;
+    gap: 20px;
+
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+a:hover{
+    color: rgb(255, 187, 0);
+}
+
+button{
+    display: none;
+
+    padding: 8px 12px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: tomato;
+
+    color: white;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* ================= BANNER ================= */
+
+main{
+    padding: 20px 40px;
+
+    background-color: rgb(252, 197, 126);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.bannerh1{
+    color: rgb(255, 44, 44);
+
+    font-size: 90px;
+
+    font-family: Impact, sans-serif;
+
+    text-transform: uppercase;
+
+    line-height: 90px;
+}
+
+.imgbanner{
+    width: 100%;
+    max-width: 430px;
+}
+
+/* ================= TÍTULOS ================= */
+
+h2{
+    text-align: center;
+
+    padding: 30px 0;
+
+    font-size: 3rem;
+}
+
+/* ================= ÁREA DOS LANCHES ================= */
+
+.areadolanche{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.lanches{
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 20px;
+}
+
+/* ================= CARD ================= */
+
+.lanche{
+    background-color: white;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+
+    transition: 0.3s;
+}
+
+.lanche:hover{
+    transform: scale(1.03);
+}
+
+.lanchesft{
+    width: 100%;
+
+    border-radius: 8px;
+}
+
+.informacoes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comprar{
+    background-color: rgb(255, 154, 71);
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    text-align: center;
+
+    color: black;
+
+    font-weight: bold;
+}
+
+h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    font-style: italic;
+
+    color: rgb(68, 26, 1);
+}
+
+/* ================= BANNER 2 ================= */
+
+.banner2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    background-color: rgb(255, 245, 243);
+}
+
+.novidade{
+    width: 100%;
+    max-width: 600px;
+}
+
+/* ================= VIDEO ================= */
+
+.video1{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 30px;
+}
+
+video{
+    width: 100%;
+    max-width: 900px;
+
+    border-radius: 10px;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px){
+
+    .bannerh1{
+        font-size: 60px;
+
+        line-height: 65px;
+    }
+
+    .imgbanner{
+        max-width: 320px;
+    }
+}
+
+/* ================= CELULAR ================= */
+
+@media (max-width: 730px){
+
+    header{
+        padding: 15px 20px;
+    }
+
+    .logo{
+        gap: 8px;
+    }
+
+    .logo img{
+        width: 45px;
+    }
+
+    h1{
+        font-size: 1rem;
+    }
+
+    .h1{
+        display: none;
+    }
+
+    button{
+        display: block;
+    }
+
+    ul{
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        right: 0;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 15px;
+
+        border-radius: 10px;
+
+        background-image: linear-gradient(
+            to right,
+            tomato,
+            rgb(245, 84, 55),
+            rgb(168, 1, 1)
+        );
+    }
+
+    main{
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .bannerh1{
+        font-size: 3rem;
+
+        line-height: 50px;
+    }
+
+    .imgbanner{
+        max-width: 240px;
+    }
+
+    h2{
+        font-size: 2.2rem;
+    }
+
+    .lanches{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .novidade{
+        width: 100%;
+    }
+}
+
+/* ================= CELULAR PEQUENO ================= */
+
+@media (max-width: 500px){
+
+    .bannerh1{
+        font-size: 2.3rem;
+
+        line-height: 40px;
+    }
+
+    .imgbanner{
+        max-width: 200px;
+    }
+
+    .lanches{
+        grid-template-columns: 1fr  1fr;
+    }
+
+    h2{
+        font-size: 1.8rem;
+    }
+
+    .comprar{
+        padding: 7px;
+    }
+}
