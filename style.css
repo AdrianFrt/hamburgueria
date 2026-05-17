@@ -67,7 +67,7 @@ a{
 }
 
 a:hover{
-    color: rgb(255, 187, 0);
+    color: rgb(0, 0, 0);
 }
 
 button{
@@ -126,6 +126,8 @@ h2{
     padding: 30px 0;
 
     font-size: 3rem;
+
+    color: rgb(68, 26, 1);
 }
 
 /* ================= ÁREA DOS LANCHES ================= */
@@ -161,7 +163,7 @@ h2{
     display: flex;
     flex-direction: column;
 
-    gap: 12px;
+    gap: 10px;
 
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
 
@@ -176,6 +178,10 @@ h2{
     width: 100%;
 
     border-radius: 8px;
+
+    height: 220px;
+
+    object-fit: cover;
 }
 
 .informacoes{
@@ -184,8 +190,16 @@ h2{
     align-items: center;
 }
 
+.informacoes span{
+    font-weight: bold;
+
+    color: tomato;
+
+    font-size: 1.1rem;
+}
+
 .comprar{
-    background-color: rgb(255, 154, 71);
+    background-color: rgb(216, 172, 137);
 
     padding: 10px;
 
@@ -196,6 +210,14 @@ h2{
     color: black;
 
     font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.comprar:hover{
+    background-color: tomato;
+
+    color: white;
 }
 
 h3{
@@ -209,9 +231,12 @@ h3{
 /* ================= BANNER 2 ================= */
 
 .banner2{
-    display: flex;
+    display: none;
+
     align-items: center;
     justify-content: center;
+
+    padding: 35px 0 35px 0;
 
     width: 100%;
 
@@ -221,6 +246,8 @@ h3{
 .novidade{
     width: 100%;
     max-width: 600px;
+
+    border-radius: 15px;
 }
 
 /* ================= VIDEO ================= */
@@ -242,6 +269,47 @@ video{
     border-radius: 10px;
 }
 
+/* ================= LOCALIZAÇÃO ================= */
+
+.localizar{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 60px;
+
+    flex-wrap: wrap;
+
+    padding: 40px 20px;
+}
+
+.pt11{
+    width: 110px;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+.pt11:hover{
+    transform: scale(1.2);
+}
+
+/* ================= NOTEBOOK ================= */
+
+@media (max-width: 1200px){
+
+    .localizar{
+        gap: 35px;
+    }
+
+    .pt11{
+        width: 95px;
+    }
+}
+
 /* ================= TABLET ================= */
 
 @media (max-width: 900px){
@@ -254,6 +322,14 @@ video{
 
     .imgbanner{
         max-width: 320px;
+    }
+
+    .localizar{
+        gap: 25px;
+    }
+
+    .pt11{
+        width: 85px;
     }
 }
 
@@ -305,7 +381,7 @@ video{
             to right,
             tomato,
             rgb(245, 84, 55),
-            rgb(168, 1, 1)
+            tomato
         );
     }
 
@@ -333,8 +409,18 @@ video{
         grid-template-columns: 1fr 1fr;
     }
 
-    .novidade{
-        width: 100%;
+    .banner2{
+        display: flex;
+    }
+
+    .localizar{
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .pt11{
+        width: 90px;
     }
 }
 
@@ -343,6 +429,8 @@ video{
 @media (max-width: 500px){
 
     .bannerh1{
+        padding: 45px 0 0 0;
+
         font-size: 2.3rem;
 
         line-height: 40px;
@@ -353,7 +441,7 @@ video{
     }
 
     .lanches{
-        grid-template-columns: 1fr  1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     h2{
@@ -362,5 +450,23 @@ video{
 
     .comprar{
         padding: 7px;
+
+        font-size: 0.8rem;
+    }
+
+    .banner2{
+        display: flex;
+    }
+
+    .novidade{
+        width: 300px;
+    }
+
+    video{
+        width: 340px;
+    }
+
+    .pt11{
+        width: 75px;
     }
 }
